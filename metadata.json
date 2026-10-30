@@ -1,0 +1,6 @@
+{
+  "name": "Durozen Bulk Apparel",
+  "description": "B2B Bulk T-Shirt Ordering & Customization Platform for corporate apparel, colleges, events, and volume buyers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

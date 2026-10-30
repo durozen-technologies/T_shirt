@@ -1,0 +1,841 @@
+SOFTWARE REQUIREMENTS SPECIFICATION (SRS) 
+B2B BULK T-SHIRT ORDERING & CUSTOMIZATION PLATFORM 
+Project Type: B2B E-Commerce & Bulk Order Management Website 
+Document Version: 1.0 
+Prepared By: Durozen Technologies Pvt. Ltd. 
+Document Status: Developer Ready – Phase 1 MVP 
+Platform: Responsive Web Application 
+Target Market: Corporate Companies, Colleges, Schools, Event Organizers, Sports 
+Teams, Businesses and Bulk Buyers. 
+1. PROJECT OVERVIEW 
+1.1 Project Introduction 
+The objective of this project is to develop a professional B2B Bulk T-Shirt Ordering and 
+Customization Website. 
+The platform will allow customers to explore diAerent T-shirt collections, configure bulk 
+order requirements, upload custom designs and submit quotation requests. 
+Unlike traditional e-commerce websites, this platform will not support individual T-shirt 
+purchases. 
+The primary business model is based on bulk orders, customized apparel requirements 
+and quotation-based order confirmation. 
+1.2 Project Objectives 
+1. Develop a premium online presence for the T-shirt business. 
+2. Showcase all available T-shirt collections. 
+3. Allow customers to configure bulk orders. 
+4. Support multiple sizes, colours and quantities. 
+5. Allow customers to upload logos and custom designs. 
+6. Generate bulk order enquiries. 
+7. Provide an admin dashboard for enquiry management. 
+8. Allow administrators to prepare and send quotations. 
+9. Manage confirmed orders and production status. 
+10. Generate more B2B business enquiries. 
+1.3 Project Scope 
+The application will contain three primary components: 
+Module 1 – Customer Website 
+ Home Page 
+ About Us 
+ Product Catalogue 
+ Product Details 
+ Bulk Order Builder 
+ Customization 
+ Bulk Enquiry Form 
+ Gallery / Portfolio 
+ Contact Us 
+Module 2 – Admin Dashboard 
+ Dashboard 
+ Product Management 
+ Category Management 
+ Bulk Enquiry Management 
+ Customer Management 
+ Quotation Management 
+ Order Management 
+ Reports 
+ Website Content Management 
+ Settings 
+Module 3 – Backend & Database 
+ Customer enquiry processing 
+ File upload management 
+ Bulk quantity calculations 
+ Quotation generation 
+ Order status management 
+ Email notifications 
+ Data storage and retrieval 
+2. USER ROLES & ACCESS CONTROL 
+The system will support the following user roles. 
+Role 
+Super Admin 
+Access 
+Complete system access 
+Admin / Sales Manager Enquiries, customers, quotations and orders 
+Customer 
+2.1 Super Admin 
+Browse products and submit bulk enquiries 
+ Access the complete dashboard. 
+ Add, edit and delete products. 
+ Manage product categories. 
+ View all customer enquiries. 
+ Assign enquiries to sales staA. 
+ Create and manage quotations. 
+ Convert approved quotations into orders. 
+ Manage order statuses. 
+ View business reports. 
+ Configure website settings. 
+2.2 Sales Manager 
+ View assigned enquiries. 
+ Contact customers. 
+ Update enquiry status. 
+ Prepare quotations. 
+ Follow up with customers. 
+ Update order progress based on permissions. 
+2.3 Customer 
+ Browse T-shirt collections. 
+ View product details. 
+ Configure bulk order requirements. 
+ Upload design files. 
+ Submit enquiries. 
+ Receive quotations through email or WhatsApp. 
+ Track confirmed orders through an enquiry/order reference. 
+Customer registration is not mandatory for Phase 1. Guest enquiry submission must be 
+supported. 
+3. CUSTOMER WEBSITE – FUNCTIONAL REQUIREMENTS 
+3.1 Homepage 
+The homepage must provide a professional and premium business presentation. 
+Required Sections 
+1. Header and Navigation 
+2. Hero Banner 
+3. About the Business 
+4. Featured T-Shirt Collections 
+5. Bulk Ordering Process 
+6. Customization Services 
+7. Industries We Serve 
+8. Why Choose Us? 
+9. Previous Projects / Portfolio 
+10. Customer Testimonials 
+11. Bulk Order CTA 
+12. Contact Information 
+13. Footer 
+Header Navigation 
+ Home 
+ About Us 
+ Collections 
+ Customization 
+ Our Work 
+ Contact Us 
+ Get Bulk Quote 
+Hero Section 
+Suggested headline: 
+"Premium Custom T-Shirts. Designed for Bulk Orders." 
+Supporting description: 
+"From corporate uniforms to college events and promotional apparel, we deliver 
+customized bulk T-shirt solutions tailored to your requirements." 
+CTA Buttons: 
+ Explore Collections 
+ Request Bulk Quote 
+3.2 About Us Page 
+Display: 
+ Company introduction 
+ Business background 
+ Manufacturing capabilities 
+ Quality standards 
+ Production capabilities 
+ Business experience 
+ Mission and vision 
+ Contact details 
+3.3 Product Catalogue 
+The system must provide a dynamic product catalogue. 
+Default Product Categories 
+1. Round Neck T-Shirts 
+2. Polo T-Shirts 
+3. Oversized T-Shirts 
+4. Sports T-Shirts / Jerseys 
+5. Hoodies 
+6. Corporate Uniforms 
+7. Custom Promotional T-Shirts 
+Categories must be manageable through the admin dashboard. 
+Product Listing Requirements 
+Each product card should display: 
+ Product image 
+ Product name 
+ Category 
+ Short description 
+ Available colours 
+ Available sizes 
+ Fabric type 
+ Minimum order quantity 
+ Customization availability 
+ View Details button 
+ Add to Bulk Enquiry button 
+There must be no individual Buy Now or single-piece checkout option. 
+Product Filters 
+Customers should be able to filter products by: 
+ Category 
+ Colour 
+ Fabric 
+ Product type 
+ Customization availability 
+3.4 Product Details Page 
+Each product must have a dedicated details page. 
+Required Fields 
+Field 
+Product Name 
+Product Code 
+Category 
+Description 
+Description 
+T-shirt model name 
+Unique product ID 
+Product category 
+Detailed description 
+Product Images Multiple images 
+Fabric Type 
+GSM 
+Cotton, Polyester, etc. 
+Fabric weight, if applicable 
+Available Colours Multiple colours 
+Available Sizes 
+S, M, L, XL, XXL, etc. 
+Minimum Quantity Admin-configurable MOQ 
+Printing Options Available printing methods 
+Embroidery 
+Customization 
+Product Actions 
+Yes / No 
+Supported / Not Supported 
+ Add to Bulk Enquiry 
+ Customize This Product 
+ Request a Quote 
+4. SMART BULK ORDER BUILDER 
+This is the core feature of the entire platform. 
+The system must allow customers to configure their T-shirt requirements before 
+submitting a quotation request. 
+4.1 Product Selection 
+Customer selects a T-shirt from the product catalogue. 
+The selected product information must be displayed in the bulk order configuration 
+screen. 
+4.2 Colour Selection 
+ Display available colours. 
+ Customer can select one or multiple colours. 
+ Show colour names and visual colour indicators. 
+ Only admin-configured colours must be available. 
+4.3 Size Selection & Quantity Management 
+Customer must be able to specify quantities for each size. 
+Example: 
+Size Quantity 
+S 
+20 
+M 50 
+L 
+75 
+XL 40 
+XXL 15 
+Total 200 
+The system must automatically calculate the total quantity. 
+Validation Rules 
+ Quantity cannot be negative. 
+ Quantity must be a whole number. 
+ At least one size must have a quantity greater than zero. 
+ Total quantity must satisfy the configured minimum order quantity. 
+ Quantity changes must automatically update the total. 
+The system must support multiple colour-wise size distributions. 
+Example: 100 Black + 100 White, each with separate size quantities. 
+4.4 Customization Selection 
+Customers must be able to select customization requirements. 
+Available options: 
+ Front Logo Printing 
+ Back Printing 
+ Sleeve Printing 
+ Full Custom Design 
+ Embroidery 
+ No Customization 
+These options must be configurable through the admin dashboard. 
+4.5 Printing Method 
+Admin must be able to configure available printing methods, such as: 
+ Screen Printing 
+ DTG Printing 
+ DTF Printing 
+ Sublimation Printing 
+ Heat Transfer Printing 
+ Embroidery 
+The selected options must be stored with the enquiry. 
+4.6 Logo & Design Upload 
+Customers must be able to upload: 
+ Company Logos 
+ PNG Images 
+ JPG / JPEG Images 
+ PDF Artwork 
+ Supported vector files, such as SVG or AI, if enabled 
+Upload Requirements 
+ Configurable maximum file size. 
+ Multiple file upload support. 
+ File type validation. 
+ Secure storage. 
+ Uploaded file preview where supported. 
+ Associate each uploaded file with its relevant enquiry. 
+The application must validate uploads on the server side and prevent unsafe files. 
+4.7 Additional Requirements 
+Provide a text area where customers can describe special requirements. 
+Examples: 
+ Company name printing. 
+ Employee name printing. 
+ DiAerent designs for diAerent departments. 
+ Urgent delivery requirement. 
+ Special packaging. 
+4.8 Bulk Order Summary 
+Before submitting, customers must see a complete order summary. 
+The summary must include: 
+ Selected product 
+ Selected colours 
+ Size-wise quantities 
+ Total quantity 
+ Fabric type 
+ Customization options 
+ Printing method 
+ Uploaded files 
+ Additional instructions 
+CTA: Submit Bulk Enquiry 
+Important: The system must not display an automatically confirmed final price unless 
+an admin-configured pricing engine is enabled. 
+5. BULK ENQUIRY MANAGEMENT 
+5.1 Enquiry Form 
+The customer must provide the following information. 
+Field 
+Full Name 
+Requirement 
+Mandatory 
+Company / Organization Optional 
+Mobile Number 
+Email Address 
+City 
+State 
+Delivery Location 
+Mandatory 
+Mandatory 
+Mandatory 
+Mandatory 
+Mandatory 
+Required Delivery Date Optional 
+Product Details 
+Total Quantity 
+Additional Notes 
+Auto-filled 
+Auto-calculated 
+Optional 
+Customer must accept the privacy policy before submission. 
+5.2 Enquiry Submission 
+When the customer submits the form: 
+1. Generate a unique enquiry ID. 
+2. Save customer details. 
+3. Save selected product information. 
+4. Save colour and size-wise quantities. 
+5. Save customization information. 
+6. Store uploaded files. 
+7. Create the enquiry record. 
+8. Send acknowledgement to the customer. 
+9. Notify the admin. 
+10. Display successful submission confirmation. 
+Sample enquiry reference: 
+BTQ-2026-00001 
+5.3 Enquiry Status 
+The system must support these statuses: 
+ New 
+ Contacted 
+ Requirement Clarification 
+ Quotation Pending 
+ Quotation Sent 
+ Negotiation 
+ Approved 
+ Rejected 
+ Converted to Order 
+ Closed 
+Admin must be able to update the enquiry status. 
+Every status update should be recorded with date, time and user details. 
+6. QUOTATION MANAGEMENT SYSTEM 
+This module allows the admin to prepare professional quotations. 
+6.1 Create Quotation 
+Admin must be able to select an enquiry and generate a quotation. 
+Quotation details: 
+ Company / Business Logo 
+ Quotation Number 
+ Quotation Date 
+ Customer Information 
+ Product Name 
+ Product Specifications 
+ Colour and Size Distribution 
+ Total Quantity 
+ Unit Price 
+ Printing Charges 
+ Customization Charges 
+ Delivery Charges 
+ Subtotal 
+ GST 
+ Grand Total 
+ Terms and Conditions 
+ Quotation Validity 
+ Payment Terms 
+6.2 Quotation Calculation 
+Example: 
+Description 
+Amount 
+200 T-Shirts × ₹250 ₹50,000 
+Printing Charges 
+Delivery Charges 
+Subtotal 
+₹5,000 
+₹2,000 
+₹57,000 
+GST (18%, illustrative) ₹10,260 
+Grand Total 
+₹67,260 
+The tax rate must be configurable by the admin. The above calculation is only an 
+example. 
+The system must support: 
+ Discount 
+ Tax configuration 
+ Advance payment percentage 
+ Balance payment 
+ Quotation expiry date 
+6.3 Quotation PDF 
+The system must generate a professional downloadable PDF quotation. 
+Admin must be able to: 
+ Preview quotation. 
+ Download PDF. 
+ Send quotation through email. 
+ Share quotation through WhatsApp. 
+ Edit quotation before approval. 
+6.4 Quotation Approval 
+Customer can approve or reject a quotation through a secure quotation link. 
+Customer approval must be recorded with: 
+ Approval status 
+ Date and time 
+ Quotation version 
+ Customer reference 
+Quotation approval must not automatically trigger manufacturing until the required 
+payment and order confirmation conditions are satisfied. 
+7. ORDER MANAGEMENT SYSTEM 
+When a quotation is approved and the required advance payment or manual 
+confirmation is completed, admin can convert it into a confirmed order. 
+7.1 Order Creation 
+Generate a unique order ID. 
+Example: 
+ORD-2026-00001 
+Store: 
+ Customer information 
+ Product details 
+ Final quantity 
+ Colour-wise quantities 
+ Size-wise quantities 
+ Printing details 
+ Final approved quotation 
+ Payment information 
+ Delivery information 
+7.2 Order Status Tracking 
+The system must support: 
+1. Order Confirmed 
+2. Design Approval Pending 
+3. Design Approved 
+4. Production Pending 
+5. In Production 
+6. Quality Check 
+7. Ready for Dispatch 
+8. Dispatched 
+9. Delivered 
+10. Completed 
+11. Cancelled 
+Admin must be able to update the order status. 
+Customer should be able to check the order status through a secure tracking link or 
+reference number. 
+8. ADMIN DASHBOARD 
+The admin panel must be protected by authentication and role-based access control. 
+8.1 Dashboard Overview 
+Display: 
+ Total Enquiries 
+ New Enquiries 
+ Pending Quotations 
+ Quotations Sent 
+ Approved Quotations 
+ Total Orders 
+ Orders In Production 
+ Completed Orders 
+ Monthly Revenue 
+Include charts for: 
+ Monthly Enquiries 
+ Monthly Orders 
+ Enquiry Conversion Rate 
+ Product-wise Enquiries 
+8.2 Product Management 
+Admin must be able to: 
+ Add new products. 
+ Edit existing products. 
+ Delete or deactivate products. 
+ Upload multiple product images. 
+ Assign categories. 
+ Configure fabric specifications. 
+ Configure available colours. 
+ Configure available sizes. 
+ Set minimum order quantity. 
+ Enable or disable customization options. 
+ Configure product visibility. 
+8.3 Category Management 
+ Create categories. 
+ Edit categories. 
+ Upload category images. 
+ Change category order. 
+ Activate / deactivate categories. 
+8.4 Enquiry Management 
+Admin must be able to: 
+ View all enquiries. 
+ Search by enquiry ID. 
+ Filter by date. 
+ Filter by customer. 
+ Filter by quantity. 
+ Filter by product. 
+ Filter by enquiry status. 
+ View uploaded designs. 
+ Assign enquiries to sales staA. 
+ Add internal notes. 
+ Update enquiry status. 
+ Create quotations. 
+8.5 Customer Management 
+Display: 
+ Customer Name 
+ Company Name 
+ Mobile Number 
+ Email 
+ Address 
+ Previous Enquiries 
+ Previous Orders 
+ Total Order Value 
+8.6 Order Management 
+Admin must be able to: 
+ View all orders. 
+ Search by order ID. 
+ Filter by order status. 
+ View complete order details. 
+ Update production status. 
+ Update dispatch details. 
+ Add tracking information. 
+ Download order information. 
+8.7 Reports 
+Generate reports for: 
+ Daily Enquiries 
+ Weekly Enquiries 
+ Monthly Enquiries 
+ Product-wise Enquiries 
+ Customer-wise Orders 
+ Confirmed Orders 
+ Completed Orders 
+ Revenue Reports 
+Provide CSV or Excel export functionality where required. 
+9. NOTIFICATION SYSTEM 
+9.1 Email Notifications 
+The system should support: 
+Customer Notifications 
+ Enquiry submitted successfully. 
+ Enquiry received confirmation. 
+ Quotation generated. 
+ Quotation approval confirmation. 
+ Order confirmation. 
+ Order status updates. 
+ Dispatch notification. 
+Admin Notifications 
+ New bulk enquiry. 
+ New design upload. 
+ Quotation approval. 
+ New order confirmation. 
+9.2 WhatsApp Integration 
+WhatsApp Business API integration can be implemented to: 
+ Notify the business about new enquiries. 
+ Send quotations to customers. 
+ Share order confirmation. 
+ Send order status updates. 
+WhatsApp integration may be implemented in Phase 2 if not included in the initial 
+project scope. 
+10. ADDITIONAL WEBSITE PAGES 
+10.1 Customization Page 
+Display: 
+ Printing services. 
+ Embroidery services. 
+ Fabric customization. 
+ Branding options. 
+ Design samples. 
+ Customization process. 
+10.2 Portfolio / Gallery 
+Admin must be able to upload completed projects. 
+Each project can contain: 
+ Project title 
+ Customer / Industry 
+ Product type 
+ Images 
+ Description 
+ Quantity, if approved for public display 
+10.3 Contact Page 
+Include: 
+ Business address 
+ Contact number 
+ Email 
+ WhatsApp link 
+ Google Maps 
+ Contact enquiry form 
+10.4 Other Pages 
+ Privacy Policy 
+ Terms and Conditions 
+ Refund / Cancellation Policy 
+ Shipping / Delivery Policy 
+These pages must be editable through the admin panel or configurable content 
+management system. 
+11. DATABASE REQUIREMENTS 
+The application must use a relational database. 
+Suggested primary tables: 
+Table 
+users 
+roles 
+customers 
+categories 
+products 
+product_images 
+product_colours 
+product_sizes 
+Purpose 
+Admin and staA accounts 
+User permissions 
+Customer information 
+Product categories 
+Product information 
+Product images 
+Available colours 
+Available sizes 
+customization_options Printing and customization options 
+enquiries 
+enquiry_items 
+enquiry_variants 
+enquiry_files 
+enquiry_notes 
+quotations 
+Main enquiry records 
+Products in each enquiry 
+Colour and size-wise quantities 
+Uploaded logos and designs 
+Internal communication 
+Quotation records 
+quotation_items 
+Quotation line items 
+orders 
+order_items 
+Confirmed orders 
+Confirmed product details 
+order_status_history Order tracking history 
+payments 
+notifications 
+website_settings 
+portfolio 
+Payment and advance records 
+Notification records 
+Website configuration 
+Completed projects 
+Database relationships must support multiple products in one enquiry, multiple colours 
+and sizes per product, and multiple quotation revisions. 
+All important records must include created_at and updated_at timestamps. 
+12. TECHNICAL REQUIREMENTS 
+12.1 Recommended Technology Stack 
+The development team may use the following stack: 
+Frontend 
+ React.js / Next.js 
+ Tailwind CSS 
+ Responsive UI components 
+Backend 
+ Node.js with Express.js / NestJS 
+ REST API architecture 
+Database 
+ MySQL / PostgreSQL 
+File Storage 
+ Secure cloud storage or protected server storage 
+PDF Generation 
+ Server-side PDF generation library 
+Authentication 
+ Secure admin authentication 
+ Role-based access control 
+ Password hashing 
+Hosting 
+ Linux VPS / Cloud Hosting 
+ SSL certificate 
+ Domain configuration 
+The development team can propose an alternative technology stack, provided all 
+functional and security requirements are satisfied. 
+12.2 Application Architecture 
+The system should follow a modular architecture. 
+Main components: 
+1. Customer Frontend 
+2. Admin Frontend 
+3. Backend API 
+4. Database 
+5. File Storage 
+6. Email Notification Service 
+7. WhatsApp Integration Service (Phase 2) 
+Frontend and backend must communicate through secure APIs. 
+13. NON-FUNCTIONAL REQUIREMENTS 
+13.1 Responsive Design 
+The application must work properly on: 
+ Desktop 
+ Laptop 
+ Tablet 
+ Android Mobile 
+ iPhone 
+Mobile-first design is strongly recommended. 
+13.2 Performance 
+ Optimize website images. 
+ Implement lazy loading. 
+ Optimize database queries. 
+ Use pagination for large enquiry and order lists. 
+ Avoid unnecessary API requests. 
+ Target good Core Web Vitals scores. 
+13.3 Security 
+ HTTPS mandatory. 
+ Secure password hashing. 
+ Role-based access control. 
+ Server-side input validation. 
+ File upload security. 
+ SQL injection protection. 
+ XSS and CSRF protection where applicable. 
+ Secure quotation and order tracking links. 
+ Regular database backups. 
+ Protect customer personal information. 
+13.4 SEO 
+ SEO-friendly URLs. 
+ Editable page titles. 
+ Meta descriptions. 
+ Image alt text. 
+ XML sitemap. 
+ Robots.txt. 
+ Structured data where applicable. 
+ Google Analytics integration. 
+ Google Search Console compatibility. 
+13.5 Maintainability 
+ Modular and reusable code. 
+ Proper API documentation. 
+ Database migration scripts. 
+ Error logging. 
+ Environment-based configuration. 
+ Deployment documentation. 
+14. BUSINESS RULES 
+The following rules must be implemented. 
+1. The platform is exclusively designed for bulk orders. 
+2. Individual piece purchases must not be supported. 
+3. Minimum Order Quantity (MOQ) must be configurable by product. 
+4. Admin must be able to configure diAerent MOQs for diAerent products. 
+5. A bulk enquiry may contain multiple products. 
+6. Each product may contain multiple colours. 
+7. Each colour may contain multiple size-wise quantities. 
+8. Total quantity must be calculated automatically. 
+9. Customers must be able to upload custom designs. 
+10. All enquiries must generate unique enquiry IDs. 
+11. Quotations must be generated by authorized admin users. 
+12. Quotation prices must be configurable and editable. 
+13. Customers must receive enquiry confirmation. 
+14. Only approved quotations can be converted into confirmed orders. 
+15. Manufacturing status must be updated by authorized staA. 
+16. All important enquiry, quotation and order status changes must be recorded. 
+17. No order should enter production without the required confirmation. 
+15. PHASE-WISE DEVELOPMENT PLAN 
+PHASE 1 – MVP DEVELOPMENT 
+The following features are mandatory for the first release. 
+Module 
+Premium Homepage 
+About Us 
+Product Catalogue 
+Product Details 
+Product Categories 
+Bulk Order Builder 
+Priority 
+High 
+High 
+High 
+High 
+High 
+Critical 
+Colour & Size Quantity Selection Critical 
+Logo / Design Upload 
+Bulk Enquiry Form 
+Enquiry Management 
+Admin Dashboard 
+Product Management 
+Quotation Management 
+PDF Quotation 
+Basic Order Management 
+Email Notifications 
+SEO Setup 
+Critical 
+Critical 
+Critical 
+Critical 
+High 
+High 
+High 
+High 
+High 
+Medium 
+Responsive Design 
+Critical 
+PHASE 2 – ADVANCED DEVELOPMENT 
+1. Live T-shirt Mockup Preview. 
+2. Interactive Design Customization. 
+3. Automated Quantity-Based Pricing. 
+4. WhatsApp Business API Integration. 
+5. Online Advance Payment Integration. 
+6. Customer Login and Order History. 
+7. Advanced Order Tracking. 
+8. Repeat Order Functionality. 
+9. Advanced Sales Analytics. 
+10. CRM Integration. 
+16. ACCEPTANCE CRITERIA 
+The project will be considered ready for delivery when the following conditions are 
+satisfied. 
+ All public website pages work correctly. 
+ Admin can create and manage products. 
+ Product categories display correctly. 
+ Customers can select products. 
+ Customers can configure colour and size-wise quantities. 
+ Total bulk quantity calculates correctly. 
+ MOQ validation works. 
+ Customers can upload supported design files. 
+ Customers can submit enquiries successfully. 
+ Unique enquiry IDs are generated. 
+ Admin receives new enquiry notifications. 
+ Admin can view and manage enquiries. 
+ Admin can create and download quotations. 
+ Admin can update quotation and order statuses. 
+ Confirmed orders are stored correctly. 
+ Website works on mobile and desktop. 
+ Security and input validation are implemented. 
+ No individual checkout or single-piece purchase flow exists. 
+17. DELIVERABLES 
+The development team must deliver: 
+1. Complete responsive customer website. 
+2. Admin dashboard. 
+3. Backend application. 
+4. Database structure. 
+5. Bulk order configuration module. 
+6. Customer enquiry management. 
+7. Quotation generation module. 
+8. Order management module. 
+9. Email notification integration. 
+10. Source code. 
+11. Database migration files. 
+12. API documentation. 
+13. Deployment documentation. 
+14. Admin user guide. 
+15. Testing and bug-fixing report. 
+18. FINAL PROJECT REQUIREMENT 
+The final application must operate as a professional B2B Bulk T-Shirt Ordering & 
+Customization Platform. 
+The website should not behave like a conventional retail shopping website. 
+Its primary objective is to convert website visitors into qualified bulk-order enquiries 
+and help the business manage those enquiries from initial contact to quotation, order 
+confirmation, production and delivery. 
+Core Business Workflow: 
+Customer Visits Website → Explores Products → Configures Bulk Order → Uploads 
+Design → Submits Enquiry → Admin Reviews → Quotation Generated → Customer 
+Approves → Order Confirmed → Production → Quality Check → Dispatch → Delivery. 
+FINAL DEVELOPMENT GOAL: 
+Build a scalable, professional and user-friendly bulk apparel ordering platform that 
+simplifies the entire bulk T-shirt enquiry and order management process. 
+Prepared By: DUROZEN TECHNOLOGIES PVT. LTD. 
+Technology Solutions | Digital Transformation | Software Development 
